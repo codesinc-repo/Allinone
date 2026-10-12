@@ -1,0 +1,23 @@
+[
+  { "id": "op_jio", "name": "Jio", "code": "JIO", "type": "MOBILE", "icon": "📱" },
+  { "id": "op_airtel", "name": "Airtel", "code": "ARTL", "type": "MOBILE", "icon": "📱" },
+  { "id": "op_vi", "name": "Vi (Vodafone Idea)", "code": "VI", "type": "MOBILE", "icon": "📱" },
+  { "id": "op_bsnl", "name": "BSNL", "code": "BSNL", "type": "MOBILE", "icon": "📱" },
+  { "id": "op_tataplay", "name": "Tata Play", "code": "TPLAY", "type": "DTH", "icon": "📺" },
+  { "id": "op_dishtv", "name": "Dish TV", "code": "DISH", "type": "DTH", "icon": "📺" },
+  { "id": "op_adtv", "name": "Airtel Digital TV", "code": "ADTV", "type": "DTH", "icon": "📺" },
+  { "id": "op_sund", "name": "Sun Direct", "code": "SUND", "type": "DTH", "icon": "📺" },
+  { "id": "op_icft", "name": "ICICI FASTag", "code": "ICFT", "type": "FASTAG", "icon": "🛣" },
+  { "id": "op_hdft", "name": "HDFC FASTag", "code": "HDFT", "type": "FASTAG", "icon": "🛣" },
+  { "id": "op_ptft", "name": "Paytm FASTag", "code": "PTFT", "type": "FASTAG", "icon": "🛣" },
+  { "id": "op_geb", "name": "Gujarat Electricity Board", "code": "GEB", "type": "ELECTRICITY", "icon": "💡" },
+  { "id": "op_tpm", "name": "Tata Power — Mumbai", "code": "TPM", "type": "ELECTRICITY", "icon": "💡" },
+  { "id": "op_bses", "name": "BSES Delhi", "code": "BSES", "type": "ELECTRICITY", "icon": "💡" },
+  { "id": "op_adel", "name": "Adani Electricity", "code": "AEL", "type": "ELECTRICITY", "icon": "💡" },
+  { "id": "op_hdfcl", "name": "HDFC Bank Loans", "code": "HDFCL", "type": "LOAN", "icon": "🏦" },
+  { "id": "op_icicl", "name": "ICICI Loans", "code": "ICICL", "type": "LOAN", "icon": "🏦" },
+  { "id": "op_baj", "name": "Bajaj Finserv", "code": "BAJ", "type": "LOAN", "icon": "🏦" },
+  { "id": "op_hdfcc", "name": "HDFC Credit Card", "code": "HDFCC", "type": "CREDIT_CARD", "icon": "💳" },
+  { "id": "op_sbic", "name": "SBI Card", "code": "SBIC", "type": "CREDIT_CARD", "icon": "💳" },
+  { "id": "op_axis", "name": "Axis Credit Card", "code": "AXIS", "type": "CREDIT_CARD", "icon": "💳" }
+]

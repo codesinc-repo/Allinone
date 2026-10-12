@@ -1,0 +1,140 @@
+[
+  {
+    "id": "d_rto",
+    "name": "RTO — Regional Transport Office",
+    "categoryId": "cd_govt",
+    "description": "Driving licence, vehicle registration, fitness certificates.",
+    "address": "Subhash Bridge, Ahmedabad - 380027",
+    "phone": "+91 79 2755 3333",
+    "website": "https://parivahan.gov.in",
+    "hours": "Mon–Fri 10:30am–5pm",
+    "isPaid": false,
+    "featured": true
+  },
+  {
+    "id": "d_amc",
+    "name": "Municipal Corporation (AMC)",
+    "categoryId": "cd_govt",
+    "description": "Property tax, birth/death certificates, water & drainage.",
+    "address": "Danapith, Ahmedabad - 380001",
+    "phone": "+91 79 2539 1811",
+    "website": "https://ahmedabadcity.gov.in",
+    "hours": "Mon–Fri 11am–6pm",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_passport",
+    "name": "Passport Seva Kendra",
+    "categoryId": "cd_govt",
+    "description": "Fresh passport & re-issue appointments.",
+    "address": "Mithakhali, Ahmedabad - 380009",
+    "phone": "+91 1800 258 1800",
+    "website": "https://passportindia.gov.in",
+    "hours": "Mon–Sat 9am–4pm",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_civil",
+    "name": "Civil Hospital Ahmedabad",
+    "categoryId": "cd_hlth",
+    "description": "Public tertiary care hospital. Emergency 24/7.",
+    "address": "Asarwa, Ahmedabad - 380016",
+    "phone": "+91 79 2268 3721",
+    "hours": "24/7",
+    "isPaid": false,
+    "featured": true
+  },
+  {
+    "id": "d_apollo",
+    "name": "Apollo Hospitals",
+    "categoryId": "cd_hlth",
+    "description": "Multi-specialty private hospital with 24/7 emergency.",
+    "address": "Plot 1A, GIDC, Bhat, Gandhinagar",
+    "phone": "+91 79 6670 1800",
+    "website": "https://apollohospitals.com",
+    "hours": "24/7",
+    "isPaid": true,
+    "featured": true
+  },
+  {
+    "id": "d_iima",
+    "name": "IIM Ahmedabad",
+    "categoryId": "cd_edu",
+    "description": "Premier management institute.",
+    "address": "Vastrapur, Ahmedabad",
+    "phone": "+91 79 7152 4444",
+    "website": "https://iima.ac.in",
+    "hours": "Mon–Fri 9am–5pm",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_torrent",
+    "name": "Torrent Power — complaints",
+    "categoryId": "cd_util",
+    "description": "Electricity complaints and new connection.",
+    "address": "Torrent House, Off Ashram Road, Ahmedabad",
+    "phone": "+91 79 2621 2800",
+    "website": "https://torrentpower.com",
+    "hours": "24/7 complaints",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_adgas",
+    "name": "Adani Gas",
+    "categoryId": "cd_util",
+    "description": "PNG supply, new connection, bill payment support.",
+    "address": "Shantigram, Ahmedabad",
+    "phone": "+91 79 2555 5555",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_police",
+    "name": "Police Control Room (Dial 100)",
+    "categoryId": "cd_emer",
+    "description": "City police emergency.",
+    "address": "Shahibaug, Ahmedabad",
+    "phone": "100",
+    "hours": "24/7",
+    "isPaid": false,
+    "featured": true
+  },
+  {
+    "id": "d_fire",
+    "name": "Fire Brigade (Dial 101)",
+    "categoryId": "cd_emer",
+    "description": "Fire and rescue services.",
+    "address": "Dhanvantari Hall, Shahibaug",
+    "phone": "101",
+    "hours": "24/7",
+    "isPaid": false,
+    "featured": false
+  },
+  {
+    "id": "d_sona",
+    "name": "Sona Legal Associates",
+    "categoryId": "cd_priv",
+    "description": "Property law, agreements, title verification.",
+    "address": "SG Highway, Ahmedabad",
+    "phone": "+91 98250 00001",
+    "website": "https://sonalegal.example",
+    "hours": "Mon–Sat 10am–7pm",
+    "isPaid": true,
+    "featured": false
+  },
+  {
+    "id": "d_vohra",
+    "name": "CA Vohra & Co",
+    "categoryId": "cd_priv",
+    "description": "Chartered accountants — tax, audit, GST, ROC filing.",
+    "address": "Navrangpura, Ahmedabad",
+    "phone": "+91 98250 00002",
+    "hours": "Mon–Sat 10am–7pm",
+    "isPaid": true,
+    "featured": false
+  }
+]

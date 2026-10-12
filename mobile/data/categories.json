@@ -1,0 +1,27 @@
+{
+  "MARKETPLACE": [
+    { "id": "cm_elec", "slug": "electronics", "name": "Electronics", "icon": "📱" },
+    { "id": "cm_furn", "slug": "furniture", "name": "Furniture", "icon": "🛋" },
+    { "id": "cm_fash", "slug": "fashion", "name": "Fashion", "icon": "👕" },
+    { "id": "cm_book", "slug": "books", "name": "Books", "icon": "📚" },
+    { "id": "cm_sport", "slug": "sports-fitness", "name": "Sports & Fitness", "icon": "⚽" },
+    { "id": "cm_appl", "slug": "appliances", "name": "Appliances", "icon": "🧊" }
+  ],
+  "SERVICES": [
+    { "id": "cs_elec", "slug": "electrician", "name": "Electrician", "icon": "💡" },
+    { "id": "cs_plumb", "slug": "plumber", "name": "Plumber", "icon": "🚿" },
+    { "id": "cs_mason", "slug": "mason", "name": "Mason (Raj Mistri)", "icon": "🧱" },
+    { "id": "cs_lab", "slug": "labour", "name": "Labour", "icon": "👷" },
+    { "id": "cs_clean", "slug": "cleaning", "name": "Deep Cleaning", "icon": "🧹" },
+    { "id": "cs_carp", "slug": "carpenter", "name": "Carpenter", "icon": "🪚" },
+    { "id": "cs_ac", "slug": "ac-repair", "name": "AC Repair", "icon": "❄️" }
+  ],
+  "DIRECTORY": [
+    { "id": "cd_govt", "slug": "government", "name": "Government Offices", "icon": "🏛" },
+    { "id": "cd_hlth", "slug": "hospitals", "name": "Hospitals & Clinics", "icon": "🏥" },
+    { "id": "cd_edu", "slug": "education", "name": "Education", "icon": "🎓" },
+    { "id": "cd_util", "slug": "utilities", "name": "Utilities", "icon": "⚡" },
+    { "id": "cd_emer", "slug": "emergency", "name": "Emergency Services", "icon": "🚨" },
+    { "id": "cd_priv", "slug": "private", "name": "Private Services", "icon": "💼" }
+  ]
+}

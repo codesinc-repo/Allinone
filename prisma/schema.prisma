@@ -1,0 +1,193 @@
+// Super App — unified schema. SQLite doesn't support enums, so string fields
+// use the constants defined in src/lib/constants.ts.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String            @id @default(cuid())
+  email           String            @unique
+  passwordHash    String
+  name            String
+  phone           String?
+  role            String            @default("USER") // USER | ADMIN | PROVIDER | SELLER
+  createdAt       DateTime          @default(now())
+
+  transactions    Transaction[]
+  listings        Listing[]
+  inquiries       Inquiry[]
+  requests        ServiceRequest[]
+  reviews         Review[]
+  reports         Report[]
+  providerProfile ServiceProvider?
+  echallans       EChallan[]
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  name        String
+  module      String   // RECHARGE | MARKETPLACE | SERVICES | PROPERTY | VEHICLE | DIRECTORY
+  icon        String?
+  createdAt   DateTime @default(now())
+
+  listings    Listing[]
+  providers   ServiceProvider[]
+  directory   DirectoryEntry[]
+}
+
+model Operator {
+  id        String   @id @default(cuid())
+  code      String   @unique
+  name      String
+  type      String   // MOBILE | DTH | FASTAG | ELECTRICITY | LOAN | CREDIT_CARD
+  logo      String?
+  active    Boolean  @default(true)
+
+  transactions Transaction[]
+}
+
+model Transaction {
+  id           String   @id @default(cuid())
+  userId       String
+  operatorId   String?
+  type         String   // MOBILE | DTH | FASTAG | ELECTRICITY | LOAN | CREDIT_CARD | ECHALLAN
+  amount       Float
+  reference    String   // account/consumer/tag number entered by user
+  status       String   @default("PENDING") // PENDING | SUCCESS | FAILED
+  providerRef  String?  // provider-returned transaction reference
+  message      String?
+  createdAt    DateTime @default(now())
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  operator Operator? @relation(fields: [operatorId], references: [id])
+}
+
+model Listing {
+  id          String   @id @default(cuid())
+  type        String   // PRODUCT | PROPERTY | VEHICLE
+  subtype     String?  // e.g. PLOT, HOUSE, CAR, BIKE, RENTAL
+  title       String
+  description String
+  price       Float
+  condition   String?  // NEW | USED | REFURBISHED (for products/vehicles)
+  images      String   // JSON array of URLs
+  location    String
+  status      String   @default("ACTIVE") // DRAFT | ACTIVE | INACTIVE | UNDER_REVIEW
+  meta        String?  // JSON blob for type-specific fields (bedrooms, year, mileage, etc.)
+  categoryId  String?
+  sellerId    String
+  createdAt   DateTime @default(now())
+  expiresAt   DateTime?
+
+  seller    User      @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  category  Category? @relation(fields: [categoryId], references: [id])
+  inquiries Inquiry[]
+}
+
+model Inquiry {
+  id         String   @id @default(cuid())
+  listingId  String
+  buyerId    String
+  message    String
+  contact    String
+  createdAt  DateTime @default(now())
+
+  listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  buyer   User    @relation(fields: [buyerId], references: [id], onDelete: Cascade)
+}
+
+model ServiceProvider {
+  id          String   @id @default(cuid())
+  userId      String?  @unique
+  name        String
+  categoryId  String
+  bio         String
+  phone       String
+  serviceArea String
+  availability String  // e.g. "Mon-Sat 9am-7pm"
+  rating      Float    @default(0)
+  reviewCount Int      @default(0)
+  verified    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  user     User?            @relation(fields: [userId], references: [id])
+  category Category         @relation(fields: [categoryId], references: [id])
+  requests ServiceRequest[]
+  reviews  Review[]
+}
+
+model ServiceRequest {
+  id            String   @id @default(cuid())
+  providerId    String
+  userId        String
+  description   String
+  location      String
+  preferredTime String
+  status        String   @default("NEW") // NEW | CONTACTED | COMPLETED | CANCELLED
+  createdAt     DateTime @default(now())
+
+  provider ServiceProvider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  user     User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  providerId String
+  userId     String
+  rating     Int
+  comment    String
+  createdAt  DateTime @default(now())
+
+  provider ServiceProvider @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  user     User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model DirectoryEntry {
+  id          String   @id @default(cuid())
+  categoryId  String
+  name        String
+  description String
+  address     String
+  phone       String?
+  website     String?
+  hours       String?
+  services    String?  // JSON array of service tags
+  isPaid      Boolean  @default(false)
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  category Category @relation(fields: [categoryId], references: [id])
+}
+
+model Report {
+  id         String   @id @default(cuid())
+  targetType String   // LISTING | PROVIDER | DIRECTORY
+  targetId   String
+  reporterId String
+  reason     String
+  status     String   @default("OPEN") // OPEN | REVIEWED | ACTIONED
+  createdAt  DateTime @default(now())
+
+  reporter User @relation(fields: [reporterId], references: [id], onDelete: Cascade)
+}
+
+model EChallan {
+  id            String   @id @default(cuid())
+  userId        String
+  vehicleNumber String
+  challanNumber String
+  amount        Float
+  description   String
+  status        String   @default("PENDING") // PENDING | PAID | FAILED
+  createdAt     DateTime @default(now())
+  paidAt        DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

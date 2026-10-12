@@ -1,0 +1,8 @@
+[
+  { "id": "u_admin", "email": "admin@superapp.test", "password": "admin1234", "name": "Super Admin", "phone": "+91 90000 00001", "role": "ADMIN" },
+  { "id": "u_priya", "email": "priya@superapp.test", "password": "password", "name": "Priya Sharma", "phone": "+91 98111 11111", "role": "USER" },
+  { "id": "u_rohit", "email": "rohit@superapp.test", "password": "password", "name": "Rohit Patel", "phone": "+91 98222 22222", "role": "USER" },
+  { "id": "u_anjali", "email": "anjali@superapp.test", "password": "password", "name": "Anjali Nair", "phone": "+91 98333 33333", "role": "USER" },
+  { "id": "u_kabir", "email": "kabir@superapp.test", "password": "password", "name": "Kabir Mehta", "phone": "+91 98444 44444", "role": "USER" },
+  { "id": "u_sana", "email": "sana@superapp.test", "password": "password", "name": "Sana Khan", "phone": "+91 98555 55555", "role": "USER" }
+]
