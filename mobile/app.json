@@ -7,12 +7,16 @@
     "scheme": "superapp",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "primaryColor": "#4C6FFF",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.codesinc.superapp"
     },
     "android": {
+      "package": "com.codesinc.superapp",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#0E6BA8"
+        "backgroundColor": "#4C6FFF"
       }
     },
     "web": {
