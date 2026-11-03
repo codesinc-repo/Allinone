@@ -1,7 +1,5 @@
 node_modules
 .next
-.env
-.env.local
 *.log
 prisma/dev.db
 prisma/dev.db-journal
@@ -13,3 +11,4 @@ mobile/ios/
 branch_structure.json
 temp_interactive_push.bat
 temp_auto_push.bat
+config.bat
